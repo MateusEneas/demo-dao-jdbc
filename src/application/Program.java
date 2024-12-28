@@ -36,5 +36,13 @@ public class Program {
         sellerDao.insert(newSeller);
         System.out.println("Inserido! Novo id = " + newSeller.getId());
 
+        System.out.println("\n=== TEST 5: seller update ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Eliza Maciel");
+        seller.setEmail("eliza@gmail.com");
+        seller.setBaseSalary(4200.0);
+        sellerDao.update(seller);
+        System.out.println("Atualização completa!");
+
     }
 }
